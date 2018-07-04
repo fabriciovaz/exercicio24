@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class tela3 extends AppCompatActivity {
 
     TextView franca, china, africa;
-    int hora =0;
+    int horaFranca =0, horaChina = 0;
 
 
     @Override
@@ -24,7 +24,20 @@ public class tela3 extends AppCompatActivity {
 
         Intent outroIntent = getIntent();
         Bundle outroBundle = outroIntent.getExtras();
-        hora = 5+Integer.parseInt(outroBundle.getString("horaSelecionada"));
-        franca.setText(outroBundle.getString("horaSelecionada")+" : "+outroBundle.getString("minutoSelecionado"));
+        horaFranca = 5+Integer.parseInt(outroBundle.getString("horaSelecionada"));
+        horaChina = 10+Integer.parseInt(outroBundle.getString("horaSelecionada"));
+
+        if (horaFranca>23){
+            horaFranca-=24;
+        }
+
+        if (horaChina>23){
+            horaChina-=24;
+        }
+
+
+        franca.setText(Integer.toString(horaFranca)+" : "+outroBundle.getString("minutoSelecionado"));
+        china.setText(Integer.toString(horaChina)+" : "+outroBundle.getString("minutoSelecionado"));
+        africa.setText(Integer.toString(horaFranca)+" : "+outroBundle.getString("minutoSelecionado"));
     }
 }

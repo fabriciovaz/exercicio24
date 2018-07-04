@@ -29,6 +29,9 @@ public class MainActivity02 extends AppCompatActivity {
     }
         public void botaoHoraMaisPressionado(android.view.View v){
         horaContador++;
+        if (horaContador>23){
+            horaContador=0;
+        }
             if (horaContador>9) {
                 hora.setText(Integer.toString(horaContador));
                     if (horaContador>11){
@@ -51,6 +54,9 @@ public class MainActivity02 extends AppCompatActivity {
 
         public void botaoHoraMenosPressionado(android.view.View v){
             horaContador--;
+            if (horaContador<0){
+                horaContador=23;
+            }
             if (horaContador<12) {
                 amPm.setText("am");
                 hora.setText(Integer.toString(horaContador));
@@ -92,7 +98,7 @@ public class MainActivity02 extends AppCompatActivity {
         android.content.Intent intent1 = new android.content.Intent(this, tela3.class);
         Bundle meuBundle = new Bundle();
         meuBundle.putString("horaSelecionada", Integer.toString(horaContador));
-        meuBundle.putString("minutoSelecionado", Integer.toString(minContador));
+        meuBundle.putString("minutoSelecionado", minuto.getText().toString());
 
         intent1.putExtras(meuBundle);
         startActivity(intent1);

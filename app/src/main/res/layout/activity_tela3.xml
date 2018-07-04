@@ -7,80 +7,88 @@
     tools:context=".tela3"
     android:background="#000000">
 
-    <TextView
-        android:id="@+id/textViewChina"
-        android:layout_width="128dp"
-        android:layout_height="82dp"
-        android:layout_alignStart="@+id/textViewAfrica"
-        android:layout_alignTop="@+id/imageViewFranca"
-        android:textAlignment="center"
-        android:text="TextView"
-        android:layout_centerVertical="true"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        />
-
-    <TextView
-        android:id="@+id/textViewFranca"
-        android:layout_width="128dp"
-        android:layout_height="82dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_marginEnd="53dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        android:textAlignment="center"/>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="304dp"
-        android:layout_height="80dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         android:text="A hora atual nos seguintes países é:"
         android:textSize="50px"
         android:background="#000000"
         android:textColor="#FFFFFF"/>
 
+    <TextView
+        android:id="@+id/textViewFranca"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:foregroundGravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textView"
+        android:layout_alignParentRight="true"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textViewChina"
+        android:layout_width="128dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textViewFranca"
+        android:text="TextView"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textViewAfrica"
+        android:layout_width="128dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textViewChina"
+        android:layout_alignParentRight="true"
+        android:text="TextView"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="102dp"
         android:layout_height="86dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/textViewFranca"
         app:srcCompat="@drawable/franca" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="102dp"
         android:layout_height="86dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="183dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/textViewChina"
         app:srcCompat="@drawable/china" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="102dp"
         android:layout_height="86dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginBottom="78dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/textViewAfrica"
         app:srcCompat="@drawable/africadosul" />
 
-    <TextView
-        android:id="@+id/textViewAfrica"
-        android:layout_width="128dp"
-        android:layout_height="82dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textViewFranca"
-        android:layout_marginBottom="87dp"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        android:text="TextView" />
+
 
 </RelativeLayout>
