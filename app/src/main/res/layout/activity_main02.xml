@@ -8,42 +8,49 @@
     tools:context=".MainActivity02">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonOk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="33dp"
-        android:text="Ok" />
+        android:text="Ok"
+        android:onClick="botaoOk2Pressionado"/>
 
     <Button
         android:id="@+id/buttonHoraMenos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
+        android:background="#808080"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="201dp"
         android:layout_marginStart="54dp"
         android:textSize="50px"
-        android:text="-" />
+        android:text="-"
+        android:onClick="botaoHoraMenosPressionado"/>
 
     <Button
         android:id="@+id/buttonHoraMais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/buttonHoraMenos"
-        android:layout_marginTop="133dp"
+        android:layout_marginTop="116dp"
+        android:background="#808080"
+        android:text="+"
         android:textSize="50px"
-        android:text="+" />
+        android:onClick="botaoHoraMaisPressionado"/>
 
     <Button
         android:id="@+id/buttonMinutoMais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/buttonHoraMais"
-        android:layout_marginEnd="111dp"
+        android:onClick="botaoMinutosMaisPressionado"
+        android:layout_marginEnd="107dp"
+        android:background="#808080"
         android:text="+"
         android:textSize="50px" />
 
@@ -51,8 +58,10 @@
         android:id="@+id/buttonMinutoMenos"
         android:layout_width="88dp"
         android:layout_height="54dp"
+        android:background="#808080"
         android:layout_alignStart="@+id/buttonMinutoMais"
         android:layout_alignTop="@+id/buttonHoraMenos"
+        android:onClick="botaoMinutosMenosPressionado"
         android:textSize="50px"
         android:text="-" />
 
@@ -61,13 +70,12 @@
         android:layout_width="88dp"
         android:layout_height="54dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/buttonHoraMenos"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="193dp"
-        android:textAlignment="center"
-        android:textSize="80px"
+        android:layout_alignStart="@+id/buttonHoraMais"
+        android:layout_marginTop="189dp"
         android:background="@android:color/darker_gray"
-        android:text="0" />
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="80px" />
 
     <TextView
         android:id="@+id/textViewMinutos"
